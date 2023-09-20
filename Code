@@ -1,4 +1,4 @@
-Encapsulation 
+# Encapsulation 
 
 #include <iostream>
 #include <string>
@@ -26,3 +26,50 @@ int main(){
     harryPotter.setBookCode(1234);
     cout<<harryPotter.getBookCode()<<endl;
 }
+
+# Inheritance
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class BookStore{
+    private:
+    int BookCode;
+    
+    public:
+    string BookName;
+    int BookPrice;
+};
+
+//single inheritance
+class library : public BookStore{
+    public:
+    string libraryName;
+};
+
+//Multilevel Inheritance
+class ReadingStore : public library{
+    public:
+    int ContactNumber;
+};
+
+//Multiple Inheritance
+class ReadingPlace: public library , public BookStore{
+    //code
+};
+
+int main(){
+    library readMore;
+    readMore.BookPrice=200;
+    cout<<readMore.BookPrice<<endl;
+    ReadingStore PlaceToRead;
+    PlaceToRead.BookName ="How to code?";
+    cout<<PlaceToRead.BookName<<endl;
+    return 0;
+}
+
+# Polymorphism
+
+
+# Abstraction
