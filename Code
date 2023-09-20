@@ -1,0 +1,28 @@
+Encapsulation 
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class MyBookStore{
+    private:
+    int BookCode;
+
+    public:
+    string nameOfBook;
+    
+    void setBookCode(int b){
+        BookCode = b;
+    }
+    
+    int getBookCode(){
+        return BookCode;
+    };
+    
+    };
+
+int main(){
+    MyBookStore harryPotter;
+    harryPotter.setBookCode(1234);
+    cout<<harryPotter.getBookCode()<<endl;
+}
